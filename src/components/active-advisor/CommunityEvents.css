@@ -1,0 +1,38 @@
+/* src/components/active-advisor/CommunityEvents.css */
+.community-events {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 60px;
+    margin-top: 70px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 35px;
+    
+  }
+  
+  .community-events h2 {
+    margin-bottom: 20px;
+    color: #3b5b5d;
+  }
+  
+  .community-events ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .community-events li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .community-events li h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #538991;
+  }
+  
+  .community-events li p {
+    margin: 5px 0;
+    color: #666;
+  }
+  

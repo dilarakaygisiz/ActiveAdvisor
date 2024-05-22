@@ -33,6 +33,10 @@ export const housesData = [
     bathrooms: '-',
     year: '2012',
     price: '0',
+    events: [
+      { title: 'Football Tournament', date: '2024-07-01', description: 'Join us for a day-long football tournament.' },
+      { title: 'Skills Workshop', date: '2024-07-15', description: 'Improve your skills with professional coaches.' },
+    ],
     
   },
   {
@@ -50,6 +54,10 @@ export const housesData = [
     bathrooms: '-',
     year: '2015',
     price: '0',
+    events: [
+      { title: 'Mountain Hike', date: '2024-07-05', description: 'Explore the mountains with our guided hike.' },
+      { title: 'Trail Clean-Up', date: '2024-07-20', description: 'Join us for a community trail clean-up event.' },
+    ],
     
   },
   {
@@ -66,6 +74,10 @@ export const housesData = [
     bathrooms: '-',
     year: '2011',
     price: '0',
+    events: [
+      { title: 'Tennis Tournament', date: '2024-07-10', description: 'Compete in our summer tennis tournament.' },
+      { title: 'Coaching Clinic', date: '2024-07-25', description: 'Attend a coaching clinic with a pro.' },
+    ],
     
   },
   {
@@ -82,6 +94,10 @@ export const housesData = [
     bathrooms: '-',
     year: '2018',
     price: '0',
+    events: [
+      { title: 'Football Match Viewing', date: '2024-07-03', description: 'Watch the big game with fellow fans.' },
+      { title: 'Training Session', date: '2024-07-17', description: 'Join our training session to improve your game.' },
+    ],
     
   },
   {

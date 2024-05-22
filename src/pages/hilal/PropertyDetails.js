@@ -1,8 +1,7 @@
 import React from "react";
-import { housesData } from "../../data"; // Değişiklik burada
-import { useParams } from "react-router-dom"; // Değişiklik burada
+import { housesData } from "../../data";
+import { useParams } from "react-router-dom";
 import { BiArea } from "react-icons/bi";
-import { Link } from "react-router-dom";
 import { IoIosPeople } from "react-icons/io";
 import { FaDoorOpen } from "react-icons/fa";
 import styles from "./PropertyDetails.module.css";
@@ -10,10 +9,11 @@ import Reservation from "../../components/hilal/Reservation";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import CommentSystem from "../../components/active-advisor/CommentSystem";
+import CommunityEvents from "../../components/active-advisor/CommunityEvents";
 
 const PropertyDetails = () => {
   const { id } = useParams();
-  const house = housesData.find((house) => house.id === parseInt(id)); // Değişiklik burada
+  const house = housesData.find((house) => house.id === parseInt(id));
 
   const form = useRef();
 
@@ -158,72 +158,91 @@ const PropertyDetails = () => {
             </div>
           </div>
 
+          {house.type === 'Community' && house.events && (
+          
+            <div className="col-md-4">
+              <CommunityEvents events={house.events} />
+            </div>
+          
+        )}
+
+
+          <div className="col-md-4">
+            {house.type === 'Sports Area' && (
+              <div
+                style={{
+                  flex: 1,
+                  background: "white",
+                  width: "100%",
+                  marginBottom: "2rem",
+                  padding: "2rem 1.5rem",
+                }}
+              >
+                <Reservation />
+              </div>
+            )}
+          </div>
+        </div>
+
+        
+
+        <div className="row">
+          <div className="col-md-8">
+            <div
+              style={{
+                background: "white",
+                marginBottom: "2rem",
+                border: "1px solid rgb(209 213 219)",
+                borderRadius: ".5rem",
+                padding: "2rem 1.5rem",
+                boxShadow: "0 4px 4px rgba(0,0,0,0.2)",
+                marginTop: "50px",
+              }}
+            >
+              <form ref={form} onSubmit={sendEmail} className={styles.form}>
+                <input
+                  className={styles.input}
+                  type="text"
+                  placeholder="Name*"
+                />
+                <input
+                  className={styles.input}
+                  type="text"
+                  placeholder="Email*"
+                />
+                <input
+                  className={styles.input}
+                  type="text"
+                  placeholder="Phone*"
+                />
+                <textarea
+                  name="message"
+                  className={styles.textarea}
+                  placeholder="I want to ask a question about..."
+                ></textarea>
+                <div style={{ display: "flex", columnGap: ".5rem" }}>
+                  <button
+                    onSubmit={sendEmail}
+                    className={`${styles.btn} ${styles.sendBtn}`}
+                  >
+                    Send message
+                  </button>
+                  <button className={`${styles.btn} ${styles.callBtn}`}>
+                    Call
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
           <div className="col-md-4">
             <div
               style={{
-                flex: 1,
-                background: "white",
-                width: "100%",
                 marginBottom: "2rem",
-                padding: "2rem 1.5rem",
+                borderRadius: ".5rem",
+                marginTop: "42px",
+                width: "400px",
               }}
             >
-              <div>
-                <Reservation />
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-8">
-              <div
-                style={{
-                  marginTop: "25px",
-                  flex: 1,
-                  background: "white",
-                  marginBottom: "2rem",
-                  border: "1px solid rgb(209 213 219)",
-                  borderRadius: ".5rem",
-                  padding: "2rem 1.5rem",
-                  boxShadow: "0 4px 4px rgba(0,0,0,0.2)",
-                }}
-              >
-                <form ref={form} onSubmit={sendEmail} className={styles.form}>
-                  <input
-                    className={styles.input}
-                    type="text"
-                    placeholder="Name*"
-                  />
-                  <input
-                    className={styles.input}
-                    type="text"
-                    placeholder="Email*"
-                  />
-                  <input
-                    className={styles.input}
-                    type="text"
-                    placeholder="Phone*"
-                  />
-                  <textarea
-                    name="message"
-                    className={styles.textarea}
-                    placeholder="I want to ask a question about..."
-                  ></textarea>
-                  <div style={{ display: "flex", columnGap: ".5rem" }}>
-                    <button
-                      onSubmit={sendEmail}
-                      className={`${styles.btn} ${styles.sendBtn}`}
-                    >
-                      Send message
-                    </button>
-                    <button className={`${styles.btn} ${styles.callBtn}`}>
-                      Call
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div className="col-md-4">
               <CommentSystem
                 communityId={house.type === 'Community' ? house.id : null}
                 sportsAreaId={house.type === 'Sports Area' ? house.id : null}

@@ -2,7 +2,7 @@
 /* CommentSystem.css */
 .comment-system-container {
     border: 2px solid  #dae4df;
-    background-color: #dae4df;
+    background-color: #e1eae5;
     color: black;
     padding: 20px;
     border-radius: 10px;
@@ -58,5 +58,4 @@
 
 .comment-title{
     font-weight: 500;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+    font-family: 'Roboto', sans-serif;}
