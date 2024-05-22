@@ -1,0 +1,139 @@
+.container {
+    /* container mx-auto min-h-[800px] mb-14 */
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 0 auto 3.5rem auto;
+    min-height: 800px;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+}
+
+.input {
+    border: 1px solid rgb(209 213 219);
+    outline: none;
+    width: 100%;
+    height: 3.5rem;
+    border-radius: .25rem;
+    padding: 0 1rem;
+    font-size: 14px
+}
+
+.textarea {
+    outline: none;
+    resize: none;
+    border-radius: ".25rem";
+    width: "100%";
+    padding: 1rem;
+    height: 9rem;
+    font-size: 14px;
+    border: 1px solid rgb(156 163 175);
+    resize: none;
+
+}
+
+.textarea:focus {
+    border-color: #538991;
+}
+
+.btn {
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    width: 100%;
+    padding: 1rem;
+    transition: .125s all;
+}
+
+.sendBtn {
+    background-color: #538991;
+    color: white;
+}
+
+.sendBtn:hover {
+    background-color: #e2ebe6;
+    color: #538991;
+}
+
+.callBtn {
+    border: 1px solid #538991;
+    color: #538991;
+}
+
+.callBtn:hover {
+    border: 1px solid #dae4df;
+    color: #dae4df;
+    background-color: #538991;
+}
+
+.categoryCont {
+    /* 'mb-4 lg:mb-0 flex gap-x-2 text-sm' */
+    margin-bottom: 1rem;
+    display: flex;
+    column-gap: .5rem;
+    font-size: 14px;
+}
+
+.categoryBtn {
+    border-radius: 100px;
+    color: white;
+    padding: 0 .75rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    .top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bottom {
+        flex-direction: row;
+    }
+
+    .categoryCont {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1234px) {
+    .container {
+        max-width: 1234px;
+    }
+}
