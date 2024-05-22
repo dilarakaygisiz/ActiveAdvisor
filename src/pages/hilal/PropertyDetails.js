@@ -9,6 +9,7 @@ import styles from "./PropertyDetails.module.css";
 import Reservation from "../../components/hilal/Reservation";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import CommentSystem from "../../components/active-advisor/CommentSystem";
 
 const PropertyDetails = () => {
   const { id } = useParams();
@@ -221,6 +222,12 @@ const PropertyDetails = () => {
                   </div>
                 </form>
               </div>
+            </div>
+            <div className="col-md-4">
+              <CommentSystem
+                communityId={house.type === 'Community' ? house.id : null}
+                sportsAreaId={house.type === 'Sports Area' ? house.id : null}
+              />
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 // import house images
-import House6 from './assets/img/houses/house6.png';
 import House3Lg from './assets/img/houses/house3lg.png';
 import Field6 from './assets/img/sportsFields/6.jpg'
 import Community9 from './assets/img/communities/9.webp';
