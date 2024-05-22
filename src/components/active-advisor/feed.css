@@ -1,0 +1,13 @@
+.communityCard{
+     display: flex;
+     width: fit-content;
+}
+
+.cardBody{
+     display: flex;
+}
+
+.cardLinks{
+     margin-bottom: 2px;
+     
+}
