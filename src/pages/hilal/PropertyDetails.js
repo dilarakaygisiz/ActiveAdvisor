@@ -254,5 +254,5 @@ const PropertyDetails = () => {
     </section>
   );
 };
-
+//KADO
 export default PropertyDetails;
