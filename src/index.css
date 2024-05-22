@@ -1,0 +1,83 @@
+a {
+  text-decoration: none !important;
+}
+
+.hilal_pages_cont {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  font-family: 'Poppins' !important;
+}
+
+.hilal_pages_cont>* {
+  
+  margin: 0 auto;
+  background-color: white;
+  font-family: 'Poppins' !important;
+}
+
+.dropdown {
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (min-width:1024px) {
+  .dropdown {
+    max-width: 296px;
+  }
+}
+
+.dropdown-btn {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  padding: 0 18px;
+  background: transparent;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: .5rem;
+}
+
+.dropdown-icon-primary {
+  font-size: 24px;
+  margin-right: 18px;
+  color: rgb(109 40 217);
+  @apply text-2xl mr-[18px] text-violet-700;
+}
+
+.dropdown-icon-secondary {
+  font-size: 24px;
+  margin-left: auto;
+  color: rgb(109 40 217);
+  @apply text-2xl text-violet-700 ml-auto;
+}
+
+.app-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 2rem 1.5rem !important;
+  font-size: 15px !important;
+  background-color: white !important;
+  position: absolute !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  list-style: none !important;
+  border-bottom-left-radius: .5rem !important;
+  border-bottom-right-radius: .5rem !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+}
+
+.dropdown-menu-item {
+  cursor: pointer;
+  transition: .125s all;
+}
+
+.dropdown-menu-item:hover {
+  color: #3B5B5D;
+}
+
+@media (min-width:1024px) {
+  .dropdown {
+    max-width: 296px;
+  }
+}
