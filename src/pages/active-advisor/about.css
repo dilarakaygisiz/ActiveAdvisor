@@ -1,0 +1,49 @@
+.about {
+  height: 87vh;
+  background-color: #71adb5;
+  background-position: center top;
+}
+
+.header {
+  padding-top: 100px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.info {
+  padding-bottom: 30px;
+  color: #fff;
+}
+
+.service {
+  width: 200px;
+  height: 180px;
+  border-radius: 50%;
+  display: block;
+ 
+}
+
+.serviceLinks{
+    color: #fff;
+    text-decoration: none;
+    font-size:  20px
+}
+
+.serviceImg{
+    justify-content: center;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.serviceCont{
+    background-color: #56858b;
+    padding-bottom: 30px;
+    margin-top: 80px;
+}
+
+
+
