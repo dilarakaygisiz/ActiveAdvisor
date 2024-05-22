@@ -1,0 +1,98 @@
+.navbar{
+    background-color: #71ADB5;
+    
+  }
+
+.navLink{
+    font-size: 18px !important;
+    color: #fff !important;
+    text-decoration: none; 
+}
+Link:hover {
+   color:#3b6e68!important;
+}
+
+.navbarContainer{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position:  sticky;
+}
+
+.navbarLeft{
+    flex: 0;
+    margin-left: 50px;
+
+}
+
+.navbarLogo{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+.navbarCenter{
+    flex: 5;
+    display: flex;
+    
+}
+
+.navbarRight{
+    flex: 2;
+    margin-right: 10px;
+    
+}
+.searchBar{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 16px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+    
+   
+}
+.searchInput{
+    background-color: #fff;
+    outline: none;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-top: 4px;
+    color: black;
+    border: none;
+}
+
+.navbarButtons{
+    margin-right: 50px;
+    margin-left: 20px;
+    display: flex;
+    
+}
+.navbarButtons button{
+    color: rgb(233, 227, 227);
+    font-size:18px;
+    float: right;
+    size: 40px;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 5px;
+    margin-right: 10px;
+    background-color: #033a3780;
+    border-color: #71ADB5;
+}
+
+#btn2{
+    background-color: rgb(46, 65, 64);
+}
+
+.buttonLinks{
+    color: #fff;
+    text-decoration: none;
+    
+}
