@@ -26,7 +26,7 @@ const PropertyDetails = () => {
       })
       .then(
         () => {
-          alert("Your message has sent successfully.");
+          alert("Your message has been sent successfully.");
           e.target.reset();
         },
         (error) => {
@@ -159,13 +159,10 @@ const PropertyDetails = () => {
           </div>
 
           {house.type === 'Community' && house.events && (
-          
             <div className="col-md-4">
               <CommunityEvents events={house.events} />
             </div>
-          
-        )}
-
+          )}
 
           <div className="col-md-4">
             {house.type === 'Sports Area' && (
@@ -183,8 +180,6 @@ const PropertyDetails = () => {
             )}
           </div>
         </div>
-
-        
 
         <div className="row">
           <div className="col-md-8">
@@ -254,5 +249,5 @@ const PropertyDetails = () => {
     </section>
   );
 };
-//KADO
+
 export default PropertyDetails;

@@ -15,6 +15,8 @@ import SignUp from './pages/active-advisor/SignUp'
 import Profile from './pages/active-advisor/Profile'
 import Error from './pages/active-advisor/Error'
 import Chatbot from './components/chatbot/Chatbot';
+import ForgotPass from './pages/active-advisor/ForgotPass';
+
 
 const App = () => {
   const HilalContainer = ({ children }) => {
@@ -35,7 +37,9 @@ const App = () => {
       <Route path="/Contact" element={<Contact />} />
       <Route path="/LogIn" element={<LogIn />} />
       <Route path="/SignUp" element={<SignUp />} />
+      <Route path="/ForgotPass" element={<ForgotPass />} />
       <Route path="/Profile" element={<Profile />} />
+      <Route path="/details/:id" element={<HilalContainer><PropertyDetails /></HilalContainer>} /> {/* Ensure this route is correct */}
       <Route path="/*" element={<Error />} />
     </Routes>
     <Chatbot />

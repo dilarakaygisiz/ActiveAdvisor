@@ -57,6 +57,7 @@ const styles = {
     justifyContent: 'space-between',
     fontSize: '14.5px',
     margin: '-15px 0 15px',
+    color: "#fff",
   },
   btn: {
     width: '100%',
@@ -84,6 +85,9 @@ const styles = {
   btnLink: {
       color: '#fff',
       textDecoration: 'none',
+  },
+  forgotPass: {
+    color: '#fff',
   }
   
 };
@@ -146,7 +150,7 @@ return (
           </div>
           <div style={styles.rememberForgot}>
             <label><input type="checkbox"/>Remember me</label>
-            <Link to="/ForgotPass">Forgot Password</Link>
+            <Link style={styles.forgotPass} to="/ForgotPass">Forgot Password</Link>
             </div>
           
           <button type="submit" className="btn" style={styles.btn}>Log In</button>

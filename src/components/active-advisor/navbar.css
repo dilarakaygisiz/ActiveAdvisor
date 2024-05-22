@@ -1,49 +1,51 @@
-.navbar{
+/* navbar.css */
+.navbar {
     background-color: #71ADB5;
-    
+    position: relative; /* Ensure the navbar itself has a relative position */
   }
-
-.navLink{
+  
+  .navLink {
     font-size: 18px !important;
     color: #fff !important;
-    text-decoration: none; 
-}
-Link:hover {
-   color:#3b6e68!important;
-}
-
-.navbarContainer{
+    text-decoration: none;
+  }
+  
+  Link:hover {
+    color: #3b6e68 !important;
+  }
+  
+  .navbarContainer {
     height: 70px;
     width: 100%;
     display: flex;
     align-items: center;
-    position:  sticky;
-}
-
-.navbarLeft{
+    position: sticky;
+    z-index: 1000; /* Ensure the navbar is above other components */
+  }
+  
+  .navbarLeft {
     flex: 0;
     margin-left: 50px;
-
-}
-
-.navbarLogo{
+  }
+  
+  .navbarLogo {
     border-radius: 50%;
     height: 70px;
     width: 70px;
     object-fit: cover;
-}
-.navbarCenter{
+  }
+  
+  .navbarCenter {
     flex: 5;
     display: flex;
-    
-}
-
-.navbarRight{
+  }
+  
+  .navbarRight {
     flex: 2;
     margin-right: 10px;
-    
-}
-.searchBar{
+  }
+  
+  .searchBar {
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -52,11 +54,12 @@ Link:hover {
     background-color: #fff;
     display: flex;
     align-items: center;
-    cursor : pointer;
-    
-   
-}
-.searchInput{
+    cursor: pointer;
+    position: relative; /* Ensure the suggestions list is positioned correctly */
+    z-index: 2000; /* High z-index to ensure it is above other elements */
+  }
+  
+  .searchInput {
     background-color: #fff;
     outline: none;
     border-radius: 50px;
@@ -64,17 +67,17 @@ Link:hover {
     padding-top: 4px;
     color: black;
     border: none;
-}
-
-.navbarButtons{
+  }
+  
+  .navbarButtons {
     margin-right: 50px;
     margin-left: 20px;
     display: flex;
-    
-}
-.navbarButtons button{
+  }
+  
+  .navbarButtons button {
     color: rgb(233, 227, 227);
-    font-size:18px;
+    font-size: 18px;
     float: right;
     size: 40px;
     width: 100px;
@@ -85,14 +88,40 @@ Link:hover {
     margin-right: 10px;
     background-color: #033a3780;
     border-color: #71ADB5;
-}
-
-#btn2{
+  }
+  
+  #btn2 {
     background-color: rgb(46, 65, 64);
-}
-
-.buttonLinks{
+  }
+  
+  .buttonLinks {
     color: #fff;
     text-decoration: none;
-    
-}
+  }
+  
+  /* New styles for suggestions list */
+  .suggestionsList {
+    position: absolute;
+    top: 40px; /* Ensure it's below the search bar */
+    background: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 3000; /* Ensure it is above other components */
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .suggestionItem {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestionItem:hover {
+    background-color: #f0f0f0;
+  }
+  

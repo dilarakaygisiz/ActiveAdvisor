@@ -1,30 +1,36 @@
-import React from "react";
-import { TextField, Input } from "@mui/material";
+import React, { useEffect } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import "./homemap.css";
+import { Input } from "@mui/material";
 import MyLocationIcon from "@mui/icons-material/MyLocation";
 import PlaceIcon from "@mui/icons-material/Place";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
 
 const APIkey = "c5522871b67545349ef9d4bc8be9e471";
 
-function HomeMap() {
-  useEffect(() => {
-    console.log(navigator);
-  }, []);
-  console.log(navigator.geolocation);
+const defaultCenter = [36.87352, 30.65658];
+const markers = [
+  { lat: 36.875, lng: 30.657, name: "Toprak Football Field" },
+  { lat: 36.872, lng: 30.655, name: "MegaSpor Volleyball Club (Beach Volley)"},
+  { lat: 36.874, lng: 30.654, name: " Konyaalti Football Field" },
+  { lat: 36.873, lng: 30.655, name: "Konyaalti Basketball Field" },
+  
+];
 
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.permissions
-        .query({ name: "geolocation" })
-        .then(function (result) {
-          console.log(result);
-        });
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-  }, []);
+// Fix for default marker icon issues in Leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+});
+
+function HomeMap() {
+
 
   function success(pos) {
     var crd = pos.coords;
@@ -39,6 +45,7 @@ function HomeMap() {
   }
   var options = { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 };
   navigator.geolocation.getCurrentPosition(success, errors, options);
+
 
   const [location, setLocation] = useState();
   function getLocationInfo(latitude, longitude) {
@@ -66,40 +73,23 @@ function HomeMap() {
     getLocationInfo(crd.latitude, crd.longitude);
   }
 
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.permissions
-        .query({ name: "geolocation" })
-        .then(function (result) {
-          console.log(result);
-          if (result.state === "granted") {
-            navigator.geolocation.getCurrentPosition(success, errors, options);
-          } else if (result.state === "prompt") {
-            navigator.geolocation.getCurrentPosition(success, errors, options);
-          } else if (result.state === "denied") {
-            console.log("Geolocation is not permitted by this user.");
-          } else {
-            console.log("Geolocation is not supported by this browser.");
-          }
-        });
-    }
-  }, []);
 
   const [place, setPlace] = useState({location});
   
+
   return (
     <div className="mapContainer">
-      <iframe
-        className="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102101.70194454717!2d30.635532785014473!3d36.8980462656465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c39aaeddadadc1%3A0x95c69f73f9e32e33!2sAntalya!5e0!3m2!1str!2str!4v1713462662488!5m2!1str!2str"
-        width="300"
-        height="300"
-        style={{ border: "0" }}
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      
-
+      <MapContainer center={defaultCenter} zoom={15} style={{ height: "450px", width: "430px", marginLeft: "25px" }}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {markers.map((marker, index) => (
+          <Marker key={index} position={[marker.lat, marker.lng]}>
+            <Popup>{marker.name}</Popup>
+          </Marker>
+        ))}
+      </MapContainer>
       <div className="addresses">
         <div className="address">
           <MyLocationIcon />
@@ -115,7 +105,8 @@ function HomeMap() {
         </div>
         
       </div>
-    </div>
+    </div>
   );
 }
+
 export default HomeMap;

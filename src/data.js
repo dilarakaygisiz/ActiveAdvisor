@@ -73,6 +73,7 @@ export const housesData = [
     "Hello! Are you passionate about hiking? Join our community where we organize beautiful hikes for you to explore and connect with fellow hiking enthusiasts. Whether you're a seasoned hiker or just beginning your outdoor adventures, our community welcomes everyone who has a passion for hiking. Sign up today and help us build a tight-knit community of nature lovers. See you on the trails!",
     image: Community16,
     imageLg: Community16Logo,
+    country: 'Antalya',
     address: '',
     bedrooms: '-',
     bathrooms: '-',
