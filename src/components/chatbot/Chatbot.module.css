@@ -42,7 +42,7 @@
 .navbar {
     display: flex;
     height: 7%;
-    background-color: #385353;
+    background-color: #1c5158;
     width: 100%;
     display: flex;
 }
@@ -64,15 +64,16 @@
     flex-direction: column;
     margin: auto 0px;
     margin-left: 2%;
+    color: #fff;
 }
 
 .bot_ #name {
-    color: #e9edef;
+    color: #fff;
     margin-bottom: 4px;
 }
 
 .bot_ #lastseen {
-    color: #002136;
+    color: #fff;
     font-size: small;
 }
 
@@ -83,13 +84,13 @@
     display: flex;
     height: 88%;
     flex-direction: column;
-    background-image: url('../../assets/img/chatbot/bg.webp');
+    background-image: url('https://img.freepik.com/free-vector/abstract-soft-blue-watercolor-texture-design-background_1055-17424.jpg');
     align-items: flex-end;
-    position: relative;
+    position:absolute;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    position: relative;
-    background-size: cover;
+    background-size:cover;
+
 }
 
 .scrollable .chatting {
@@ -133,7 +134,7 @@
     text-align: start;
     width: auto;
     padding: 10px;
-    background-color: #ca5216;
+    background-color: #20215a;
     border-radius: 15px 15px 0px;
 }
 
@@ -331,7 +332,7 @@
     color: white;
     text-align: center;
     height: auto;
-    background-color: #b45221;
+    background-color: #1c5158;
     text-align: center;
 }
 
@@ -360,7 +361,7 @@
     height: 100%;
     outline-color: transparent;
     accent-color: transparent;
-    background-color: #cd7727df;
+    background-color: #54959edf;
     outline: none;
     border-color: transparent;
 }

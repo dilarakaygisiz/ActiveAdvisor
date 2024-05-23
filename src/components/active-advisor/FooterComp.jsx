@@ -50,7 +50,7 @@ function FooterComp() {
                   POPULAR COMMUNITIES
                 </h6>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="/property/9" className="text-reset">
                     The Football Hub
                   </a>
                 </p>
@@ -65,7 +65,7 @@ function FooterComp() {
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="/details/16" className="text-reset">
                     Peak Pursuit Hikers
                   </a>
                 </p>
@@ -74,12 +74,12 @@ function FooterComp() {
               <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="/Communities" className="text-reset">
                     Communities
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="/Communities" className="text-reset">
                     Sports Fields
                   </a>
                 </p>
@@ -89,7 +89,7 @@ function FooterComp() {
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="/Contact" className="text-reset">
                     Help
                   </a>
                 </p>

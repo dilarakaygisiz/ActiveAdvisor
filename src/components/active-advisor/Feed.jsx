@@ -23,7 +23,7 @@ function Feed() {
               <Card.Text>
               "Dash Community" brings together runners of all levels in a supportive and inspiring environment. United by a love for running and personal development, members from beginners to seasoned marathoners share experiences, train together, and motivate each other. Join us for regular group runs, expert training advice, and meaningful connections, all within a community that celebrates every stride.
               </Card.Text>
-              <Card.Link href="#">Find More..</Card.Link>
+              <Card.Link href="/Communities">Find More..</Card.Link>
             </Card.Body>
           </Card>
           
@@ -49,7 +49,7 @@ function Feed() {
                 and be a part of fostering a sense of camaraderie among football
                 lovers. See you there!
               </Card.Text>
-              <Card.Link href="#">Find More..</Card.Link>
+              <Card.Link href="/Communities">Find More..</Card.Link>
             </Card.Body>
           </Card>
           <Card className="communityCard" style={{ margin: "10px" }}>
@@ -74,7 +74,7 @@ function Feed() {
                 build a tight-knit community of nature lovers. See you on the
                 trails!
               </Card.Text>
-              <Card.Link href="#">Find More..</Card.Link>
+              <Card.Link href="/Communities">Find More..</Card.Link>
             </Card.Body>
           </Card>
         </div>
@@ -107,7 +107,7 @@ function Feed() {
                   and celebrate every ace together!
                 </Card.Text>
                 
-                  <Card.Link href="#">Find More..</Card.Link>
+                  <Card.Link href="/Communities">Find More..</Card.Link>
                 
               </div>
             </Card.Body>
@@ -136,7 +136,7 @@ function Feed() {
                   camaraderie among golf lovers. See you on the greens!
                 </Card.Text>
                 
-                  <Card.Link href="#">Find More..</Card.Link>
+                  <Card.Link href="/Communities">Find More..</Card.Link>
                 
               </div>
             </Card.Body>
@@ -168,7 +168,7 @@ function Feed() {
                 community for you. Connect with us and be a part of a community
                 that celebrates every pass, tackle, and goal!
               </Card.Text>
-              <Card.Link href="#">Find More..</Card.Link>
+              <Card.Link href="/Communities">Find More..</Card.Link>
             </Card.Body>
           </Card>
         </div>
