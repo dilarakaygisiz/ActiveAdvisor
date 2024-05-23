@@ -16,6 +16,7 @@ import Profile from './pages/active-advisor/Profile'
 import Error from './pages/active-advisor/Error'
 import Chatbot from './components/chatbot/Chatbot';
 import ForgotPass from './pages/active-advisor/ForgotPass';
+import CreateCommPage from './components/hilal/CreateCommPage'
 
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
       <Route path="/SignUp" element={<SignUp />} />
       <Route path="/ForgotPass" element={<ForgotPass />} />
       <Route path="/Profile" element={<Profile />} />
+      <Route path="/CreateCommPage" element={<CreateCommPage />} />
       <Route path="/details/:id" element={<HilalContainer><PropertyDetails /></HilalContainer>} /> {/* Ensure this route is correct */}
       <Route path="/*" element={<Error />} />
     </Routes>

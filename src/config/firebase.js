@@ -17,11 +17,12 @@ const firebaseConfig = {
   projectId: "active-advisor-e469f",
   storageBucket: "active-advisor-e469f.appspot.com",
   messagingSenderId: "988269080834",
-  appId: "1:988269080834:web:faa8c738f7dd40789e921b"
+  appId: "1:988269080834:web:faa8c738f7dd40789e921b",
+  measurementId: "G-PYZR54XP9N"
 };
   const app = initializeApp(firebaseConfig);
   export const storage = getStorage(app);
-  getAnalytics(app);
+  const analytics =getAnalytics(app);
   export const auth = getAuth(app);
 
   export const db = getDatabase(app);

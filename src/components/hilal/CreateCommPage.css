@@ -1,0 +1,110 @@
+.image-uploader {
+    max-width: 600px;
+    margin: 40px auto; /* Add top margin here */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .image-preview {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .uploaded-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .uploading {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .progress-container {
+    position: relative;
+    height: 20px;
+    margin: 20px auto; /* Center horizontally */
+    width: 80%; /* Reduce the width of the progress bar */
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #FF7E5F, #FEB47B); /* Gradient color */
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress-steps {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .progress-steps span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .progress-steps .completed {
+    background-color: #f05a09; /* Green color for completed steps */
+    transform: scale(1.2); /* Slightly enlarge completed steps */
+  }
+  
+  .all-done {
+    text-align: center;
+    font-size: 16px;
+    color: #40b7e3; /* Green color */
+    margin-top: 10px;
+    display: none; /* Hide initially */
+  }
+  
+  .all-done.visible {
+    display: block; /* Show when visible class is added */
+  }
+  
+  .save-report-btn {
+    display: block;
+    width: 60%; /* Reduce the width of the save report button */
+    padding: 10px 20px;
+    margin: 40px auto; /* Center the button */
+    background-color: #808080; /* Gray color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-report-btn:hover {
+    background-color: #696969; /* Darker gray on hover */
+  }
